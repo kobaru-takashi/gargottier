@@ -1,0 +1,18 @@
+.main-header
+  .container 
+    .title
+      French restaurant
+    .name
+      Gargottier
+  .menuber
+    = link_to root_path, class: 'menuber__home' do
+      Home
+    = link_to "Menu",menu_index_path, class: 'menuber__home'
+    = link_to "Reservation",reservation_index_path, class: 'menuber__home'
+    = link_to "Access",access_index_path, class: 'menuber__home'
+        
+  .Contents
+    .Contents__message
+    = link_to image_tag("/assets/icon_instagram", width: '25', alt: "サンプル画像", class: "icon"), "https://www.instagram.com/"
+    = link_to image_tag("/assets/icon_facebook.png", width: '25', alt: "サンプル画像", class: "icon"), "https://www.facebook.com/"
+    = link_to image_tag("/assets/icon_twitter", width: '25', alt: "サンプル画像", class: "icon"), "https://twitter.com/"
