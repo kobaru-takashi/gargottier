@@ -1,0 +1,117 @@
+.header
+  = render "main-header"
+
+.main
+  -# .swiper
+  -#   .swiper-container
+  -#     .swiper-wrapper
+  -#       .swiper-slide
+  -#         = image_tag("/assets/1102.jpg",alt: "app-store", class: "icon")
+  -#       .swiper-slide
+  -#         = image_tag("/assets/00.jpg",alt: "app-store", class: "icon")
+  -#       .swiper-slide
+  -#         = image_tag("/assets/peach.jpg",alt: "app-store", class: "icon")
+  -#     .swiper-pagination
+  -#     .swiper-button-prev
+  -#     .swiper-button-next
+
+  .swiper-container
+    .swiper-wrapper
+      .swiper-slide 
+        = image_tag("/assets/2.jpg",alt: "app-store", class: "icon")
+      .swiper-slide 
+        = image_tag("/assets/3.jpg",alt: "app-store", class: "icon")
+      .swiper-slide 
+        = image_tag("/assets/restauran.jpg",alt: "app-store", class: "icon")
+    .swiper-pagination
+    .swiper-button-prev
+    .swiper-button-next
+    .swiper-scrollbar
+
+  %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"}
+  :javascript 
+    var mySwiper = new Swiper ('.swiper-container', {
+        // オプションパラメータ(一部のみ抜粋)
+        loop: true, // 最後のスライドまで到達した場合、最初に戻らずに続けてスライド可能にするか。
+        slidesPerView: 1, // 何枚のスライドを表示するか
+        effect: 'fade', // "slide", "fade"(フェード), "cube"(キューブ回転), "coverflow"(カバーフロー) または "flip"(平面回転)
+        speed: 3000,
+        // スライダーの自動再生
+        // autoplay: true 　のみなら既定値での自動再生
+        autoplay: {
+          delay: 3000, // スライドが切り替わるまでの表示時間(ミリ秒)
+          stopOnLast: false, // 最後のスライドまで表示されたら自動再生を中止するか
+          disableOnInteraction: true // ユーザーのスワイプ操作を検出したら自動再生を中止するか
+        },
+        // ページネーションを表示する場合
+        pagination: {
+          el: '.swiper-pagination',　 // ページネーションを表示するセレクタ
+        },
+        // 前後スライドへのナビゲーションを表示する場合
+        navigation: {
+          nextEl: '.swiper-button-next', // 次のスライドボタンのセレクタ
+          prevEl: '.swiper-button-prev', // 前のスライドボタンのセレクタ
+        },
+      });
+ 
+
+  .messages
+    .coment 
+      .coment-top What's' New
+      .coment-under 新着情報
+    .message
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+      %div 2002年5月9日  本日の営業は午後14時からになります。
+
+
+
+
+
+
+
+  %script{:src => "http://code.jquery.com/jquery-3.1.0.min.js", :type => "text/javascript"}
+  :javascript
+    $(function(){
+      $('a[href^="#"]').click(function() {
+        var speed = 400;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+
+  %h1#index 目次
+  %ul
+    %li
+      %a{:href => "#1"} sample1
+    %li
+      %a{:href => "#2"} sample2
+    %li
+      %a{:href => "#3"} sample3
+    %li
+      %a{:href => "#4"} sample4
+  #1
+    %h2 sample1
+    %a.button{:href => "#index", :class => "kop"} Topへ
+  #2
+    %h2 sample2
+    %a.button{:href => "#index"} Topへ
+  #3
+    %h2 sample3
+    %a.button{:href => "#index"} Topへ
+  #4
+    %h2 sample4
+    %a.button{:href => "#index"} Topへ

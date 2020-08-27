@@ -1,0 +1,45 @@
+
+.main-header{
+  height: 130px;
+  padding-top: 20px;
+  font-family: 'Caveat', cursive;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  position: fixed;
+  z-index: 30;
+  margin: auto;
+  width: 100%;
+  .container{
+    font-size: 50px;
+    font-family: 'Caveat', cursive;
+    padding-right: 40px;
+    .title{
+      font-size: 20px;
+      padding-left: 30px ;
+    }
+    .name{
+      font-size: 50px;
+    }
+  }
+  .menuber{
+    display: flex;
+    align-items: flex-end;
+    font-size: 24px;
+    padding-bottom: 30px;
+    
+    &__home{
+      padding-right: 54px;
+      text-decoration: none;
+      color: #656565;
+      font-family: 'Caveat', cursive;
+    }
+  } 
+  .Contents{
+    .icon{
+      padding-left: 10px;
+      padding-top: 46px;
+    }
+  }
+}
+
