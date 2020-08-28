@@ -58,7 +58,7 @@
       text-align: center;
     }
     .block-frame{
-      margin-bottom: 200px;
+      margin-bottom: 100px;
       border-width: 3px;
       padding: 5px;
       border: 2px solid rgb(165,131,0);
@@ -84,6 +84,17 @@
             letter-spacing: 2px;
             font-weight: 800;
           }
+          .inner-lunch{
+            top: -124px;
+            font-size: 30px;
+            position: absolute;
+            left: 20px;
+            z-index: 2;
+            color: #fff;
+            transform: rotate(-45deg);
+            letter-spacing: 2px;
+            font-weight: 800;
+          }
         }
         .block-frame-text{
           max-width: 600px;
@@ -101,6 +112,7 @@
               justify-content: center;
               align-items: flex-end;
               border-bottom:1px solid rgb(165,131,0);
+              padding-bottom: 15px;
               &__tex{
                 font-size: 12px;
                 padding-bottom: 5px;
