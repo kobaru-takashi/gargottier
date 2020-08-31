@@ -4,10 +4,10 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Gargotier
     %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css", :rel => "stylesheet"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Caveat", :rel => "stylesheet"}/
+    %link{:href => "https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.css", :rel => "stylesheet"}/
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
   %body
     = yield
