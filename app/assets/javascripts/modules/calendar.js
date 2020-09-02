@@ -1,11 +1,6 @@
 $(function () {
   // 画面遷移を検知
   $(document).on('turbolinks:load', function () {
-    var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
-
       if ($('#calendar').length) {
           function Calendar() {
               return $('#calendar').fullCalendar({

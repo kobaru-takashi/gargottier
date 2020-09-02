@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+
   end
 
   # GET /events/1
@@ -16,6 +17,7 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    
 
   end
 
@@ -73,6 +75,6 @@ class EventsController < ApplicationController
   end
    
   def event_params
-    params.require(:event).permit(:title, :body, :start_date, :end_date)
+    params.require(:event).permit(:title, :body, :date)
   end
 end

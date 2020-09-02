@@ -1,0 +1,27 @@
+.main{
+  .main-block{
+    max-width: 1000px;
+    margin: auto;
+    border: 2px solid  #656565;
+    .title{
+    }
+    .tag{
+    }
+    .reservation-bar{
+    }
+    .reservation-content{
+    }
+    .reservation__date{
+      &__header{
+        &__left{
+          &__name{
+          }
+          &__required{
+          }
+        }
+        &__right{
+        }
+      }
+    }
+  }
+}

@@ -16,8 +16,8 @@
       %tr
         %td= event.title
         %td= event.body
-        %td= event.start_date
-        %td= event.end_date
+        %td= event.date
+        -# %td= event.end_date
         %td= link_to 'Show', event
         %td= link_to 'Edit', edit_event_path(event)
         %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
