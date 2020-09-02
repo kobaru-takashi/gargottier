@@ -1,0 +1,19 @@
+.mate
+  =@events.start_date
+
+
+
+
+.new-product
+= form_with model: @reservation, local:true do |f|
+  .new-product-text
+    = f.label :reservation_time, class:"new-product-text-title" do
+      商品の状態
+      %span.require 必須
+    = f.select :reservation_time, Reservation.reservation_times.keys, {prompt: "選択してください"}, class: "new-product-text__select"
+  .new-product-text
+    = f.label :number_of_people, class:"new-product-text-title" do
+      商品の状態
+      %span.require 必須
+    = f.select :number_of_people, Reservation.number_of_people.keys, {prompt: "選択してください"}, class: "new-product-text__select"
+
