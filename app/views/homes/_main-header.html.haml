@@ -3,13 +3,29 @@
     .title
       French restaurant
     .name
-      Gargottier
+      Gargotier
   .menuber
-    = link_to root_path, class: 'menuber__home' do
-      Home
-    = link_to "Menu" ,root_path, class: 'menuber__home'
-    = link_to "Reservation" ,root_path, class: 'menuber__home'
-    = link_to "Access" ,root_path, class: 'menuber__home'
+    %a.menuber__home{:href => "#Home"} Home
+    %a.menuber__home{:href => "#Menu"} Menu
+    %a.menuber__home{:href => "#Reservation"} Reservation
+    %a.menuber__home{:href => "#Access"} Access
+
+
+  -# %script{:src => "http://code.jquery.com/jquery-3.1.0.min.js", :type => "text/javascript"}
+  :javascript
+    $(function(){
+      $('a[href^="#"]').click(function() {
+        var adjust = -90;
+        var speed = 400;
+        var href= $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top + adjust;
+        $('body,html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+      });
+    });
+
+
         
   .Contents
     .Contents__message

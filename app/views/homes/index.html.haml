@@ -2,19 +2,7 @@
   = render "main-header"
 
 .main
-  -# .swiper
-  -#   .swiper-container
-  -#     .swiper-wrapper
-  -#       .swiper-slide
-  -#         = image_tag("/assets/1102.jpg",alt: "app-store", class: "icon")
-  -#       .swiper-slide
-  -#         = image_tag("/assets/00.jpg",alt: "app-store", class: "icon")
-  -#       .swiper-slide
-  -#         = image_tag("/assets/peach.jpg",alt: "app-store", class: "icon")
-  -#     .swiper-pagination
-  -#     .swiper-button-prev
-  -#     .swiper-button-next
-
+  #Home
   .swiper-container
     .swiper-wrapper
       .swiper-slide 
@@ -29,32 +17,28 @@
     .swiper-scrollbar
 
   %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"}
-  :javascript 
+  :javascript
     var mySwiper = new Swiper ('.swiper-container', {
-        // オプションパラメータ(一部のみ抜粋)
-        loop: true, // 最後のスライドまで到達した場合、最初に戻らずに続けてスライド可能にするか。
-        slidesPerView: 1, // 何枚のスライドを表示するか
-        effect: 'fade', // "slide", "fade"(フェード), "cube"(キューブ回転), "coverflow"(カバーフロー) または "flip"(平面回転)
-        speed: 3000,
-        // スライダーの自動再生
-        // autoplay: true 　のみなら既定値での自動再生
-        autoplay: {
-          delay: 3000, // スライドが切り替わるまでの表示時間(ミリ秒)
-          stopOnLast: false, // 最後のスライドまで表示されたら自動再生を中止するか
-          disableOnInteraction: true // ユーザーのスワイプ操作を検出したら自動再生を中止するか
-        },
-        // ページネーションを表示する場合
-        pagination: {
-          el: '.swiper-pagination',　 // ページネーションを表示するセレクタ
-        },
-        // 前後スライドへのナビゲーションを表示する場合
-        navigation: {
-          nextEl: '.swiper-button-next', // 次のスライドボタンのセレクタ
-          prevEl: '.swiper-button-prev', // 前のスライドボタンのセレクタ
-        },
-      });
- 
+      loop: true,
+      slidesPerView: 1,
+      effect: 'fade',
+      speed: 3000,
+      autoplay: {
+        delay: 3000,
+        stopOnLast: false,
+        disableOnInteraction: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
 
+
+  
   .messages
     .coment 
       .coment-top What's' New
@@ -75,43 +59,133 @@
       %div 2002年5月9日  本日の営業は午後14時からになります。
 
 
+  #Menu
+  .menu
+    .bolok
+      .title Menu
+      .block-frame
+        .block-frame-inner
+          .logo
+            .inner Dinner
+          .block-frame-text
+            .mark 
+              .mark__title-header 信頼の6皿コース
+              .mark__title-footer Menu de Confiance
+              .mark__title-price 
+                ¥5,900 
+                .mark__title-price__tex 
+                  ※税込
+            .menu-detail 
+              .menu-detail__item
+                .menu-detail__item__title Amuse Bouche - 小前菜
+                .menu-detail__item__details 生ウニの貴婦人風
+              .menu-detail__item 
+                .menu-detail__item__title Spécialité - スペシャリティ
+                .menu-detail__item__details 山梨県産 無農薬野菜達 28〜30種の盛合せ
+              .menu-detail__item
+                .menu-detail__item__title Les Entrées - 本日の前菜
+                .menu-detail__item__details 鮎のリエットのパートフィロ包み 金糸瓜のサラダ添え ライムの香りを乗せて
+                .menu-detail__item__details 牛サーロイン冷製ローストビーフとハンガリー産フォアグラのポーピエット仕立て
+              .menu-detail__item 
+                .menu-detail__item__title Potage - ポタージュ
+                .menu-detail__item__details お好みの1皿をお選びください
+                .menu-detail__item__details “乳脂肪分ゼロ”季節野菜のナチュラルポタージュ
+                .menu-detail__item__details 又は“シェ・トモ特製”地魚を使ったマルセイユ風お魚のスープ
+              .menu-detail__item
+                .menu-detail__item__title Les poissons ou viands - 本日のお魚料理またはお肉料理
+                .menu-detail__item__details 香草を纏わせた長崎県産鮮魚のソテー クリアなサフラン風味のスープ仕立て
+                .menu-detail__item__details 仔羊のコンフィ 夏野菜のラタトゥイユと共に ピストゥーソースで
+                .menu-detail__item__details ニュージーランド産ハーブ牛フィレ肉のポワレ マデラ酒風味のソース
+              .menu-detail__item
+                .menu-detail__item__title Dessert aux choix et Café, thé -
+                .menu-detail__item__details イマジネーションのデザート
+                .menu-detail__item__details お好みの1皿をお選びください
+                .menu-detail__item__details コーヒー 又は 紅茶
+            .dinner-btn 
+      .block-frame
+        .block-frame-inner
+          .logo
+            .inner-lunch  Lunch
+          .block-frame-text
+            .mark 
+              .mark__title-header 4皿のランチコース
+              .mark__title-footer Déjeuner Course
+              .mark__title-price 
+                ¥3,900 
+                .mark__title-price__tex 
+                  ※税込
+            .menu-detail 
+              .menu-detail__item
+                .menu-detail__item__title Les Entrées - 季節の前菜
+              .menu-detail__item 
+                .menu-detail__item__title Légumes organiques chauds et froids - スペシャリティ
+                .menu-detail__item__details 長野産 無農薬野菜達 28〜30種の盛合せ
+              .menu-detail__item
+                .menu-detail__item__title Les poissons et viands - 本日のお魚料理またはお肉料理
+                .menu-detail__item__details お好みの1皿をお選びください
+                .menu-detail__item__details 鮎のリエットのパートフィロ包み 金糸瓜のサラダ添え ライムの香りを乗せて
+                .menu-detail__item__details 牛サーロイン冷製ローストビーフとハンガリー産フォアグラのポーピエット仕立て
+              .menu-detail__item
+                .menu-detail__item__title Dessert aux choix et Café, thé
+                .menu-detail__item__details イマジネーション デザートとコーヒー又は紅茶
+            .dinner-btn 
+
+  #Reservation
+  .row
+  = link_to 'スケジュール登録', new_event_path, class: 'btn-success'
+  #calendar
 
 
 
-
-
-  %script{:src => "http://code.jquery.com/jquery-3.1.0.min.js", :type => "text/javascript"}
+  #Access
+  .map-title OUR LOCATION
+  .map-google
+    #map
+  %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAzMeEZcT8d3Nyz3GIG41YOtkGeHZpaKQs&callback=initMap"}
   :javascript
-    $(function(){
-      $('a[href^="#"]').click(function() {
-        var speed = 400;
-        var href= $(this).attr("href");
-        var target = $(href == "#" || href == "" ? 'html' : href);
-        var position = target.offset().top;
-        $('body,html').animate({scrollTop:position}, speed, 'swing');
-        return false;
+    let map
+    let geocoder
+    const display = document.getElementById('display')
+    function initMap(){
+      geocoder = new google.maps.Geocoder()
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 35.706638, lng:139.671185},
+        zoom: 15,
       });
-    });
+      var marker = new google.maps.Marker({
+        position: {lat: 35.706638, lng:139.671185},
+        map: map,
+      });
+      var infowindow = new google.maps.InfoWindow({
+        position: {lat: 35.708150, lng:139.671185},
+        map: map,
+        content: "東京都中野区中野1-00-00"
+      });
+      google.maps.event.addListener(infowindow, "closeclick", function() {
+        google.maps.event.addListenerOnce(marker, "click", function(event) {
+          infowindow.open(map, marker);
+        });
+      });
+    }
 
-  %h1#index 目次
-  %ul
-    %li
-      %a{:href => "#1"} sample1
-    %li
-      %a{:href => "#2"} sample2
-    %li
-      %a{:href => "#3"} sample3
-    %li
-      %a{:href => "#4"} sample4
-  #1
-    %h2 sample1
-    %a.button{:href => "#index", :class => "kop"} Topへ
-  #2
-    %h2 sample2
-    %a.button{:href => "#index"} Topへ
-  #3
-    %h2 sample3
-    %a.button{:href => "#index"} Topへ
-  #4
-    %h2 sample4
-    %a.button{:href => "#index"} Topへ
+  .about
+    .name
+      .first-name French restaurant
+      .family-name Gargotier
+    .address
+      .address__header 1-00-00, Nakano, NakanoKu, Tokyo, Japan
+      .address__footer 東京都中野区中野1-00-00
+    .number TEL.03-0000-0000
+    .access
+      .access__header JR 中央線 ・ 総武線 ／ 東京メトロ 東西線
+      .access__footer「中野駅」 北口出口より徒歩8分。
+      .access__header-english JR Chuo Line . Seibu Line / Tokyo metro Touzai Line
+      .access__footer-english Nakano station , EXIT North 8min walk
+    .remark
+      .remark__header ※駐車スペースはありません。お近くのパーキングサービスをご利用ください。
+      .remark__footer ATTENTION:NO PARKING SORRY
+
+
+
+  .footer
+    = render "main-footer"

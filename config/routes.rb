@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
+  resources :events do
+    resources :reservations do
+    end
+  end
+
+  # get 'events/new'
+  # get 'events/show'
+  # get 'events/edit'
+  # get 'events/calendar'
   devise_for :users
   root "homes#index"
   get 'homes/index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 end
