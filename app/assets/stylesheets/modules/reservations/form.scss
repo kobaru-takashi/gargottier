@@ -87,7 +87,6 @@
               border-radius: 3px;
               padding: 1px 5px;
             }
-
           }
           &__right{
             position: relative;
@@ -108,8 +107,6 @@
               padding: 20px 70px;
               background-color: #fff;
               margin-left: 96px ;
-
-
             }
           }
         }
@@ -277,7 +274,6 @@
             border-width:0px 1px 0px 0px;
             padding-left: 15px;
             &__name{
-
             }
             &__required{
               background-color: #E73820;
@@ -286,24 +282,17 @@
               margin-left: 10px;
               border-radius: 3px;
               padding: 1px 5px;
-
             }
-
           }
           &__right{
             padding: 15px 30px 0px 30px;
-  
             &__text{
               width: 600px;
               height: 100px;
             }
-  
           }
-
         }
-
       }
-
     }
   }
 }
