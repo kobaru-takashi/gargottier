@@ -1,0 +1,321 @@
+.main-new{
+  .main-block{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 40px;
+    border: 1px solid  #E4E4E4;
+    .title{
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px;
+      border-bottom: 1px dotted #656565;
+    }
+    .tag{
+      display: flex;
+      justify-content: start;
+      padding: 10px 0px;
+      font-weight: bold;
+      .around{
+        padding: 10px 100px;
+        background-color: #E73820;
+        color: #fff;
+        border-radius: 8px 0 0 8px;
+      }
+      .around-border{
+        width: 0;
+        height: 0;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 30px solid #E73820;
+        padding-right: 11px;
+      }
+      .other{
+        padding: 10px 100px;
+        background-color: #F0F0E8;
+        border-radius: 8px 0 0 8px;
+      }
+      .other-border {
+        width: 0;
+        height: 0;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 30px solid #F0F0E8;
+        padding-right: 11px;
+      }
+      .complete{
+        padding: 10px 120px;
+        background-color: #F0F0E8;
+        border-radius: 8px;
+      }
+    }
+    .reservation-bar{
+      width: 100%;
+      height: 40px;
+      background-color: #FEE6E5;
+      border-radius: 8px;
+      .reservation-content{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 7px 0px 0px 12px;
+      }
+    }
+    .reservation__date{
+      border: solid  #E4E4E4;
+      border-width:1px 1px 0px 1px;
+      margin: 10px 0;
+      &__header{
+        &__box{
+          border-bottom: 1px solid  #E4E4E4;
+          display: flex;
+          &__left{
+            display: flex;
+            justify-content: start;
+            background-color: #F4F4F4;
+            height: 60px;
+            width: 250px;
+            align-items: center;
+            border: solid  #E4E4E4;
+            border-width:0px 1px 0px 0px;
+            padding-left: 15px;
+            &__name{
+            }
+            &__required{
+              background-color: #E73820;
+              color: #fff;
+              font-size: 10px;
+              margin-left: 10px;
+              border-radius: 3px;
+              padding: 1px 5px;
+            }
+          }
+          &__right{
+            position: relative;
+            width: 666px;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            z-index: 1;
+            &__btn{
+              padding: 10px;
+            }
+            &__day{
+              margin-left: 10px;
+            }
+            &__hide{
+              position: absolute;
+              z-index: 2;
+              padding: 20px 70px;
+              background-color: #fff;
+              margin-left: 96px ;
+            }
+          }
+        }
+      }
+    }
+    .reservation__personal{
+      border:solid  #E4E4E4;
+      border-width:1px 1px 0px 1px;
+      margin: 10px 0;
+      &__middle{
+        &__box{
+          border-bottom: 1px solid  #E4E4E4;
+          display: flex;
+          &__left{
+            display: flex;
+            justify-content: start;
+            background-color: #F4F4F4;
+            height: 150px;
+            width: 250px;
+            align-items: center;
+            border: solid  #E4E4E4;
+            border-width:0px 1px 0px 0px;
+            padding-left: 15px;
+            &__name{
+            }
+            &__required{
+              background-color: #E73820;
+              color: #fff;
+              font-size: 10px;
+              margin-left: 10px;
+              border-radius: 3px;
+              padding: 1px 5px;
+            }
+          }
+          &__phone{
+            display: flex;
+            justify-content: start;
+            background-color: #F4F4F4;
+            height: 90px;
+            width: 250px;
+            align-items: center;
+            border: solid  #E4E4E4;
+            border-width:0px 1px 0px 0px;
+            padding-left: 15px;
+            &__name{
+            }
+            &__required{
+              background-color: #E73820;
+              color: #fff;
+              font-size: 10px;
+              margin-left: 10px;
+              border-radius: 3px;
+              padding: 1px 5px;
+            }
+          }
+          &__email{
+            display: flex;
+            justify-content: start;
+            background-color: #F4F4F4;
+            height: 110px;
+            width: 250px;
+            align-items: center;
+            border: solid  #E4E4E4;
+            border-width:0px 1px 0px 0px;
+            padding-left: 15px;
+            &__name{
+            }
+            &__required{
+              background-color: #E73820;
+              color: #fff;
+              font-size: 10px;
+              margin-left: 10px;
+              border-radius: 3px;
+              padding: 1px 5px;
+            }
+          }
+          &__right{
+            padding-bottom: 10px;
+            .name-block{
+              display: flex;
+              padding: 5px 30px 0px 30px;
+              .family-name{
+                .name{
+                }
+                .input{
+                  width: 170px;
+                  height: 40px;
+                  padding: 5px 10px;
+                }
+              }
+              .first-name{
+                padding-left: 20px;
+                .name{
+                }
+                .input{
+                  width: 170px;
+                  height: 40px;
+                  padding: 5px 10px;
+                }
+              }
+              .family-name-kana{
+                .name{
+                }
+                .input{
+                  width: 170px;
+                  height: 40px;
+                  padding: 5px 10px;
+                }
+              }
+              .first-name-kana{
+                padding-left: 20px;
+                .name{
+                }
+                .input{
+                  width: 170px;
+                  height: 40px;
+                  padding: 5px 10px;
+                }
+              }
+            }
+            .phone{
+              padding: 15px 30px 0px 30px;
+              .input{
+                width: 300px;
+                height: 40px;
+                padding: 5px 10px;
+              }
+              .note{
+                padding-top: 5px;
+                font-size: 11.5px;
+              }
+            }
+            .email{
+              padding: 15px 30px 0px 30px;
+              .input{
+                width: 300px;
+                height: 40px;
+                padding: 5px 10px;
+              }
+              .note{
+                padding-top: 5px;
+                font-size: 11.5px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .reservation__request{
+      border:solid  #E4E4E4;
+      border-width:1px 1px 0px 1px;
+      margin: 10px 0;
+      &__footer{
+        &__box{
+          border-bottom: 1px solid  #E4E4E4;
+          display: flex;
+          &__left{
+            display: flex;
+            justify-content: start;
+            background-color: #F4F4F4;
+            height: 130px;
+            width: 250px;
+            align-items: center;
+            border: solid  #E4E4E4;
+            border-width:0px 1px 0px 0px;
+            padding-left: 15px;
+            &__name{
+            }
+            &__required{
+              background-color: #E73820;
+              color: #fff;
+              font-size: 10px;
+              margin-left: 10px;
+              border-radius: 3px;
+              padding: 1px 5px;
+            }
+          }
+          &__right{
+            padding: 15px 30px 0px 30px;
+            &__text{
+              width: 600px;
+              height: 100px;
+            }
+          }
+        }
+      }
+    }
+    .confirmation{
+      text-align: center;
+      margin: 30px 0 50px 0;
+      .confirmation-note{
+        font-size: 15px;
+      }
+      .confirmation-btn{
+        margin-top: 30px;
+        .btn{
+          padding: 20px 100px;
+          background-color: #66CCFF;
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+          font-size: 20px;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+  .back-btn{
+    padding-left: 220px;
+    text-decoration: none;
+  }
+}

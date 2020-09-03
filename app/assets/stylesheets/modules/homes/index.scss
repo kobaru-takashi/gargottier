@@ -141,22 +141,10 @@
     }
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  #calendar{
+    width: 1000px;
+    margin: auto;
+  }
 
   .about{
     text-align: center;
@@ -167,48 +155,35 @@
       font-size: 30px;
       padding-bottom: 20px;
       .first-name{
-
       } 
       .family-name{
-
       }
-
     }
     .address{
       padding-bottom: 20px;
       &__header{
-
       }
       &__footer{
-
       }
-
     }
     .number{
       padding-bottom: 20px;
-
     }
     .access{
       padding-bottom: 20px;
-
       &__header{
-
-      } 
+      }
       &__footer{
-
       }
       &__header-english{
-
       }
       &__footer-english{
-
       }
     }
     .remark{
       padding-bottom: 20px;
       color: #8B0000;
       &__header{
-
       }
       &__footer{
       }
