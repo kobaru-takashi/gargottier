@@ -1,6 +1,9 @@
 .main
   .main-block
-    = form_with model: @reservation, local:true do |f|
+    -# = form_with model: @reservation, local:true do |f|
+    = form_for [@events, @reservation], url: confirm_event_reservations_path(@events.id) do |f|
+
+
       .title French restaurant Gargotier ご予約
       .tag
         .around 入力画面
@@ -19,7 +22,10 @@
               .reservation__date__header__box__left__required 必須
             .reservation__date__header__box__right
               .reservation__date__header__box__right__day
-                =@events.date
+                -# = f.datetime_select :event_id , value: @events.date
+
+                = f.hidden_field :event_id, value:@events.id
+                -# =@events.date
               .reservation__date__header__box__right__hide
         .reservation__date__header
           .reservation__date__header__box
@@ -92,6 +98,7 @@
         .confirmation-note メールアドレスの入力間違い防止の為、
         .confirmation-note 次の画面でメールアドレス認証を行います。
         .confirmation-btn
-          = link_to "同意して次に進む", new_event_reservation_path(@events.id), data: {"turbolinks" => false} , class: "btn" ,id: "form-btn"
-
+          =f.submit "同意して次に進む",class:"btn", id: "form-btn"
+          -# = link_to "クレジットカードで購入", pay_product_purchases_path(product_id: @product.id), method: :post, class: "btn"
+          -# = link_to "同意して次に進む",confirm_event_reservations_path(@events.id), data: {"turbolinks" => false} , class: "btn" ,id: "form-btn"
   = link_to '＜戻る', root_path, class: 'back-btn'

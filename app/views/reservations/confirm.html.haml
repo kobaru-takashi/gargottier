@@ -1,0 +1,24 @@
+%p
+  family_name: #{@reservation.family_name}
+%p
+  first_name: #{@reservation.first_name}
+%p
+  email: #{@reservation.email}
+= form_for :reservation, url: new_event_reservations_path do |f|
+  = f.hidden_field :family_name
+  = f.hidden_field :first_name
+  = f.hidden_field :email
+  = f.submit '入力画面へ戻る'
+= form_for :reservation, url: event_reservations_path(@events.id) do |f|
+  = f.hidden_field :reservation_time
+  = f.hidden_field :number_of_people
+  = f.hidden_field :family_name
+  = f.hidden_field :first_name
+  = f.hidden_field :family_name_kana
+  = f.hidden_field :first_name_kana
+  = f.hidden_field :phone_number
+  = f.hidden_field :email
+  = f.hidden_field :request
+  = f.hidden_field :event_id
+
+  = f.submit '登録する'

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :events do
-    resources :reservations do
+    resources :reservations, only: [:new, :create] do
+      collection do
+        post :new, path: :new, as: :new, action: :back
+        post :confirm
+      end
     end
   end
 
