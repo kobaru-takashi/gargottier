@@ -1,23 +1,105 @@
-%p
-  family_name: #{@reservation.family_name}
-%p
-  first_name: #{@reservation.first_name}
-%p
-  email: #{@reservation.email}
-= form_for :reservation, url: new_event_reservations_path do |f|
-  = f.hidden_field :family_name
-  = f.hidden_field :first_name
-  = f.hidden_field :email
-  = f.submit '入力画面へ戻る'
-= form_for :reservation, url: event_reservations_path(@events.id) do |f|
-  = f.hidden_field :reservation_time
-  = f.hidden_field :number_of_people
-  = f.hidden_field :family_name
-  = f.hidden_field :first_name
-  = f.hidden_field :family_name_kana
-  = f.hidden_field :first_name_kana
-  = f.hidden_field :phone_number
-  = f.hidden_field :email
-  = f.hidden_field :request
-  = f.hidden_field :event_id
-  = f.submit '登録する'
+.main-new
+  .main-block
+    .title French restaurant Gargotier ご予約
+    .tag
+      .around 入力画面
+      .around-border 
+      .other 確認画面
+      .other-border 
+      .complete 予約完了
+
+    .reservation-bar
+      .reservation-content ご予約内容
+    .reservation__date
+      .reservation__date__header
+        .reservation__date__header__box
+          .reservation__date__header__box__left
+            .reservation__date__header__box__left__name ご来店日
+          .reservation__date__header__box__right
+            .reservation__date__header__box__right__day
+              =@events.date
+            .reservation__date__header__box__right__hide
+      .reservation__date__header
+        .reservation__date__header__box
+          .reservation__date__header__box__left
+            .reservation__date__header__box__left__name ご来店時間
+          .reservation__date__header__box__right
+            = @reservation.reservation_time
+      .reservation__date__header
+        .reservation__date__header__box
+          .reservation__date__header__box__left
+            .reservation__date__header__box__left__name ご来店人数
+          .reservation__date__header__box__right
+            = @reservation.number_of_people
+    
+    .reservation-bar
+      .reservation-content ご来店者情報
+    .reservation__personal
+      .reservation__personal__middle
+        .reservation__personal__middle__box
+          .reservation__personal__middle__box__left
+            .reservation__personal__middle__box__left__name 代表者名
+          .reservation__personal__middle__box__right
+            .name-block
+              .family-name
+                = @reservation.family_name
+              .first-name
+                = @reservation.first_name
+            .name-block
+              .family-name-kana
+                = @reservation.family_name_kana
+              .first-name-kana
+                = @reservation.first_name_kana
+      .reservation__personal__middle
+        .reservation__personal__middle__box
+          .reservation__personal__middle__box__phone
+            .reservation__personal__middle__box__phone__name 電話番号
+          .reservation__personal__middle__box__right
+            .phone
+              = @reservation.phone_number
+              .note ※お店から連絡が入る場合があります。必ず連絡が取れる番号を入力してください。
+
+      .reservation__personal__middle
+        .reservation__personal__middle__box
+          .reservation__personal__middle__box__email
+            .reservation__personal__middle__box__email__name メールアドレス
+          .reservation__personal__middle__box__right
+            .email
+              = @reservation.email
+              .note ※ご予約内容をお送りします。必ず連絡が取れるメールアドレスを入力してください。
+              .note ※迷惑メール対策でドメイン指定受信を選択されている方は、@gargotier.jp を受信するように設定してください。
+    .reservation-bar
+      .reservation-content ご要望事項
+    .reservation__request
+      .reservation__request__footer
+        .reservation__request__footer__box
+          .reservation__request__footer__box__left
+            .reservation__request_footer__box__left__name ご要望事項
+          .reservation__request__footer__box__right
+            = @reservation.request
+    
+ 
+    = form_for :reservation, url: event_reservations_path(@events.id) do |f|
+      = f.hidden_field :reservation_time
+      = f.hidden_field :number_of_people
+      = f.hidden_field :family_name
+      = f.hidden_field :first_name
+      = f.hidden_field :family_name_kana
+      = f.hidden_field :first_name_kana
+      = f.hidden_field :phone_number
+      = f.hidden_field :email
+      = f.hidden_field :request
+      = f.hidden_field :event_id
+      = f.submit '登録する',class:"btn"
+    = form_for :reservation, url: new_event_reservations_path do |f|
+      = f.hidden_field :reservation_time
+      = f.hidden_field :number_of_people
+      = f.hidden_field :family_name
+      = f.hidden_field :first_name
+      = f.hidden_field :family_name_kana
+      = f.hidden_field :first_name_kana
+      = f.hidden_field :phone_number
+      = f.hidden_field :email
+      = f.hidden_field :request
+      = f.hidden_field :event_id
+      = f.submit '入力画面へ戻る',class:"back"

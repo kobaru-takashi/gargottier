@@ -17,8 +17,8 @@
       font-weight: bold;
       .around{
         padding: 10px 100px;
-        background-color: #E73820;
-        color: #fff;
+        background-color: #F0F0E8;
+
         border-radius: 8px 0 0 8px;
       }
       .around-border{
@@ -26,12 +26,13 @@
         height: 0;
         border-top: 25px solid transparent;
         border-bottom: 25px solid transparent;
-        border-left: 30px solid #E73820;
+        border-left: 30px solid #F0F0E8;
         padding-right: 11px;
       }
       .other{
         padding: 10px 100px;
-        background-color: #F0F0E8;
+        background-color: #E73820;
+        color: #fff;
         border-radius: 8px 0 0 8px;
       }
       .other-border {
@@ -39,7 +40,7 @@
         height: 0;
         border-top: 25px solid transparent;
         border-bottom: 25px solid transparent;
-        border-left: 30px solid #F0F0E8;
+        border-left: 30px solid #E73820;
         padding-right: 11px;
       }
       .complete{
@@ -79,14 +80,6 @@
             padding-left: 15px;
             &__name{
             }
-            &__required{
-              background-color: #E73820;
-              color: #fff;
-              font-size: 10px;
-              margin-left: 10px;
-              border-radius: 3px;
-              padding: 1px 5px;
-            }
           }
           &__right{
             position: relative;
@@ -99,14 +92,14 @@
               padding: 10px;
             }
             &__day{
-              margin-left: 10px;
+
             }
             &__hide{
               position: absolute;
               z-index: 2;
               padding: 20px 70px;
               background-color: #fff;
-              margin-left: 96px ;
+              margin-left: 100px ;
             }
           }
         }
@@ -124,49 +117,33 @@
             display: flex;
             justify-content: start;
             background-color: #F4F4F4;
-            height: 150px;
+            height: 80px;
             width: 250px;
             align-items: center;
             border: solid  #E4E4E4;
             border-width:0px 1px 0px 0px;
             padding-left: 15px;
             &__name{
-            }
-            &__required{
-              background-color: #E73820;
-              color: #fff;
-              font-size: 10px;
-              margin-left: 10px;
-              border-radius: 3px;
-              padding: 1px 5px;
             }
           }
           &__phone{
             display: flex;
             justify-content: start;
             background-color: #F4F4F4;
-            height: 90px;
+            height: 76px;
             width: 250px;
             align-items: center;
             border: solid  #E4E4E4;
             border-width:0px 1px 0px 0px;
             padding-left: 15px;
             &__name{
-            }
-            &__required{
-              background-color: #E73820;
-              color: #fff;
-              font-size: 10px;
-              margin-left: 10px;
-              border-radius: 3px;
-              padding: 1px 5px;
             }
           }
           &__email{
             display: flex;
             justify-content: start;
             background-color: #F4F4F4;
-            height: 110px;
+            height: 98px;
             width: 250px;
             align-items: center;
             border: solid  #E4E4E4;
@@ -174,57 +151,19 @@
             padding-left: 15px;
             &__name{
             }
-            &__required{
-              background-color: #E73820;
-              color: #fff;
-              font-size: 10px;
-              margin-left: 10px;
-              border-radius: 3px;
-              padding: 1px 5px;
-            }
           }
           &__right{
             padding-bottom: 10px;
             .name-block{
               display: flex;
-              padding: 5px 30px 0px 30px;
+              padding: 11px 30px 0px 30px;
               .family-name{
-                .name{
-                }
-                .input{
-                  width: 170px;
-                  height: 40px;
-                  padding: 5px 10px;
-                }
               }
               .first-name{
-                padding-left: 20px;
-                .name{
-                }
-                .input{
-                  width: 170px;
-                  height: 40px;
-                  padding: 5px 10px;
-                }
               }
               .family-name-kana{
-                .name{
-                }
-                .input{
-                  width: 170px;
-                  height: 40px;
-                  padding: 5px 10px;
-                }
               }
               .first-name-kana{
-                padding-left: 20px;
-                .name{
-                }
-                .input{
-                  width: 170px;
-                  height: 40px;
-                  padding: 5px 10px;
-                }
               }
             }
             .phone{
@@ -275,47 +214,40 @@
             padding-left: 15px;
             &__name{
             }
-            &__required{
-              background-color: #E73820;
-              color: #fff;
-              font-size: 10px;
-              margin-left: 10px;
-              border-radius: 3px;
-              padding: 1px 5px;
-            }
           }
           &__right{
-            padding: 15px 30px 0px 30px;
-            &__text{
-              width: 600px;
-              height: 100px;
-            }
+            padding: 5px 0 0 10px;
+            width: 1000px;
+  
+
           }
         }
       }
     }
-    .confirmation{
-      text-align: center;
-      margin: 30px 0 50px 0;
-      .confirmation-note{
-        font-size: 15px;
-      }
-      .confirmation-btn{
-        margin-top: 30px;
-        .btn{
-          padding: 20px 100px;
-          background-color: #66CCFF;
-          text-decoration: none;
-          color: #fff;
-          font-weight: bold;
-          font-size: 20px;
-          border-radius: 3px;
-        }
-      }
+    .btn{
+      display: flex;
+      margin: auto;
+      margin-top: 20px;
+      padding: 15px 90px;
+      background-color: #66CCFF;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 3px;
+      border-style: solid; border-color: #66CCFF;
     }
-  }
-  .back-btn{
-    padding-left: 220px;
-    text-decoration: none;
+    .back{
+      display: flex;
+      margin: auto;
+      margin-top: 80px;
+      margin-bottom: 30px;
+      padding: 10px 50px;
+      background-color: #F0F0E8;
+
+      font-weight: bold;
+      font-size: 17px;
+      border-radius: 3px;
+      border-style: solid; border-color: #F0F0E8;
+    }
   }
 }
