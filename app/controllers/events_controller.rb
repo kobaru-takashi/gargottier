@@ -1,36 +1,24 @@
 class EventsController < ApplicationController
   before_action :set_event
 
-  # GET /events
-  # GET /events.json
   def index
-    @events = Event.all
-
+    @events = Event.all.order(date: "ASC")
   end
 
-  # GET /events/1
-  # GET /events/1.json
   def show
     @event = Event.find(params[:id])
   end
 
-  # GET /events/new
   def new
     @event = Event.new
-    
-
   end
 
-  # GET /events/1/edit
   def edit
     @event = Event.find(params[:id])
   end
 
-  # POST /events
-  # POST /events.json
   def create
     @event = Event.new(event_params)
-
     respond_to do |format|
       if @event.save
         format.html { redirect_to @event, notice: 'Event was successfully created.' }
@@ -42,8 +30,6 @@ class EventsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /events/1
-  # PATCH/PUT /events/1.json
   def update
     @event = Event.find(params[:id])
     respond_to do |format|
@@ -57,8 +43,6 @@ class EventsController < ApplicationController
     end
   end
 
-  # DELETE /events/1
-  # DELETE /events/1.json
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
@@ -69,7 +53,6 @@ class EventsController < ApplicationController
   end
 
   private
-  
   def set_event
     @event = Event.where(params[:id])
   end

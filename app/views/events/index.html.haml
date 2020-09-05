@@ -1,27 +1,26 @@
-%h1 Listing events
+.event-main
+  %h1 イベントのリスト
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Body
-      %th Start date
-      %th End date
-      %th
-      %th
-      %th
-
-  %tbody
-    - @events.each do |event|
+  %table
+    %thead
       %tr
-        %td= event.title
-        %td= event.body
-        %td= event.date
-        -# %td= event.end_date
-        %td= link_to 'Show', event
-        %td= link_to 'Edit', edit_event_path(event)
-        %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
+        %th タイトル
+        %th 内容
+        %th 日付
+        %th
+        %th
+        %th
 
-%br
+    %tbody
+      - @events.each do |event|
+        %tr
+          %td= event.title
+          %td= event.date
+          %td= link_to 'Show', event
+          %td= link_to 'Edit', edit_event_path(event) 
+          %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
 
-= link_to 'New Event', new_event_path
+  %br
+  = link_to '新規登録', new_event_path
+  \|
+  = link_to 'ホーム', root_path

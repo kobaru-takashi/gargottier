@@ -1,4 +1,3 @@
 class Event < ApplicationRecord
-  has_many :reservation
-
+  has_many :reservations
 end
