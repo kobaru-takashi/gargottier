@@ -37,10 +37,6 @@ class ReservationsController < ApplicationController
     event_id = Event.find(params[:event_id])
     @reservation = Event.select('id')
     Reservation.create!(reservation_params)
-
-
-    binding.pry
-
     render :complete
 
   end
@@ -54,5 +50,3 @@ class ReservationsController < ApplicationController
 
   end
 end
-
-# @reservation = params[:reservation].permit(:reservation_time, :number_of_people,:family_name,:first_name,:family_name_kana,:first_name_kana,:phone_number, :email, :request).merge(event_id: event.id)

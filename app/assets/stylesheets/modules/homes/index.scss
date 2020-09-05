@@ -140,10 +140,40 @@
       }
     }
   }
-  
+  .link{
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 30px;
+  }
+
   #calendar{
     width: 1000px;
     margin: auto;
+    .fc-time{
+      display : none;
+    }
+    .fc-content{
+      text-align: center;
+    }
+    .fc-title{
+      font-size: 50px;
+    }
+    tr:first-child > td > .fc-day-grid-event {
+      height: 60px;
+      width: 70px;
+      margin: auto;
+      border-radius: 10px;
+    } 
+    .fc-center {
+      font-size: 36px;
+      padding-left: 120px;
+  }
+  }
+  td.fc-sat {
+    background-color: #eaf4ff;
+  }
+  td.fc-sun {
+      background-color: #ffeaea;
   }
 
   .about{

@@ -2,8 +2,6 @@
   .main-block
     -# = form_with model: @reservation, local:true do |f|
     = form_for [@events, @reservation], url: confirm_event_reservations_path(@events.id) do |f|
-
-
       .title French restaurant Gargotier ご予約
       .tag
         .around 入力画面
