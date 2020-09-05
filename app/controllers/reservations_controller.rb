@@ -9,6 +9,8 @@ class ReservationsController < ApplicationController
   def confirm
     @events = Event.find(params[:event_id])
     @reservation = Reservation.new(reservation_params)
+    return if @reservation.valid?
+    render :new
   end
 
   def back

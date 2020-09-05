@@ -1,6 +1,7 @@
 .main
   .main-block
     = form_for [@events, @reservation], url: confirm_event_reservations_path(@events.id) do |f|
+      = render 'layouts/error_messages', model: f.object
       .title French restaurant Gargotier ご予約
       .tag
         .around 入力画面
