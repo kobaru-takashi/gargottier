@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       collection do
         post :new, path: :new, as: :new, action: :back
         post :confirm
+        get :complete
       end
     end
   end
