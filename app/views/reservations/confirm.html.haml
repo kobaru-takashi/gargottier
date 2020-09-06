@@ -77,7 +77,6 @@
             .reservation__request_footer__box__left__name ご要望事項
           .reservation__request__footer__box__right
             = @reservation.request
-    
  
     = form_for :reservation, url: event_reservations_path(@events.id),local: true, scope: :payment do |f|
       = f.hidden_field :reservation_time
