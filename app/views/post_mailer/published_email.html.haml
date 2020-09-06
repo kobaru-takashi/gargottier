@@ -14,7 +14,7 @@
     %p ご予約いただいた内容をお知らせします。
     %br
     %p【 ご予約内容 】
-    %p ご来店日：      
+    %p ご来店日：       #{@events.date}
     %p ご来店時間：     #{@reservation.reservation_time}
     %p ご来店人数：     #{@reservation.number_of_people} 名様
     %p 代表者名：       #{@reservation.family_name} #{@reservation.first_name}  様
@@ -38,9 +38,6 @@
     %br
     %hr/
     %br
-
-
-
 
 
 

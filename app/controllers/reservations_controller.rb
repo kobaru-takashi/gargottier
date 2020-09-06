@@ -25,30 +25,14 @@ class ReservationsController < ApplicationController
 
   def create
     @events = Event.find(params[:event_id])
-    # Reservation.create!(reservation_params)
-    # redirect_to complete_event_reservations_path(@events.id)
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
-      PostMailer.published_email(@reservation).deliver
+      PostMailer.published_email(@reservation,@events).deliver
       redirect_to complete_event_reservations_path(@events.id)
     else
       render :new
     end
   end
-
-
-    # respond_to do |f|
-    #   if Reservation.create!(reservation_params)
-    #     PostMailer.send_when_create(@reservation).deliver
-    #     format.html { redirect_to @reservation, notice: 'User was successfully created.' }
-    #     format.json { render :show, status: :created, location: @reservation }
-    #     redirect_to complete_event_reservations_path(@events.id)
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @user.errors, status: :unprocessable_entity }
-    #   end
-    # end
-
   
   def complete
   end
