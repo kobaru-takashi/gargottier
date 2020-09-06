@@ -12,8 +12,6 @@
       .swiper-slide 
         = image_tag("/assets/restauran.jpg",alt: "app-store", class: "icon")
     .swiper-pagination
-    .swiper-button-prev
-    .swiper-button-next
     .swiper-scrollbar
 
   %script{:src => "https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"}
@@ -25,7 +23,6 @@
       speed: 3000,
       autoplay: {
         delay: 3000,
-        stopOnLast: false,
         disableOnInteraction: true
       },
       pagination: {

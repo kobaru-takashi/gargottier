@@ -90,7 +90,7 @@
       = f.hidden_field :email
       = f.hidden_field :request
       = f.hidden_field :event_id
-      = f.submit '登録する',class:"btn"
+      = f.submit '登録する',class:"btn",style: "cursor:pointer"
     = form_for :reservation, url: new_event_reservations_path do |f|
       = f.hidden_field :reservation_time
       = f.hidden_field :number_of_people
@@ -102,4 +102,4 @@
       = f.hidden_field :email
       = f.hidden_field :request
       = f.hidden_field :event_id
-      = f.submit '入力画面へ戻る',class:"back"
+      = f.submit '入力画面へ戻る',class:"back",style: "cursor:pointer"
