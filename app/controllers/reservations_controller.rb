@@ -4,13 +4,17 @@ class ReservationsController < ApplicationController
   def new
     @events = Event.find(params[:event_id])
     @reservation = Reservation.new
+    
   end
 
   def confirm
     @events = Event.find(params[:event_id])
-    @reservation = Reservation.new(reservation_params)
-    return if @reservation.valid?
-    render :new
+    if request.post?
+      @reservation = Reservation.new(reservation_params)
+      render :new if @reservation.invalid?
+    else
+      redirect_to new_event_reservations_path
+    end
   end
 
   def back
@@ -22,12 +26,10 @@ class ReservationsController < ApplicationController
   def create
     @events = Event.find(params[:event_id])
     Reservation.create!(reservation_params)
-    render :complete
+    redirect_to complete_event_reservations_path(@events.id)
   end
   
   def complete
-    @reservation = Event.find(params[:reservation_id])
-    redirect_to root_path
   end
 
   private

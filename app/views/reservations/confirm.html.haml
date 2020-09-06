@@ -79,7 +79,7 @@
             = @reservation.request
     
  
-    = form_for :reservation, url: event_reservations_path(@events.id) do |f|
+    = form_for :reservation, url: event_reservations_path(@events.id),local: true, scope: :payment do |f|
       = f.hidden_field :reservation_time
       = f.hidden_field :number_of_people
       = f.hidden_field :family_name
