@@ -25,8 +25,13 @@ class ReservationsController < ApplicationController
 
   def create
     @events = Event.find(params[:event_id])
-    Reservation.create!(reservation_params)
-    redirect_to complete_event_reservations_path(@events.id)
+    @reservation = Reservation.new(reservation_params)
+    if @reservation.save
+      PostMailer.published_email(@reservation,@events).deliver
+      redirect_to complete_event_reservations_path(@events.id)
+    else
+      render :new
+    end
   end
   
   def complete

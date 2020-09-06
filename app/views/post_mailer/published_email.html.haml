@@ -1,0 +1,40 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8"}/
+  %body
+    %h2
+      = @reservation.family_name
+      = @reservation.first_name
+      様
+    %hr/
+    %p ※本メールは、自動的に配信しています。
+    %p このたびは、French restaurant Gargotierをご予約いただき誠にありがとうございます。
+    %p ご予約いただいた内容をお知らせします。
+    %br
+    %p【 ご予約内容 】
+    %p ご来店日：       #{@events.date}
+    %p ご来店時間：     #{@reservation.reservation_time}
+    %p ご来店人数：     #{@reservation.number_of_people} 名様
+    %p 代表者名：       #{@reservation.family_name} #{@reservation.first_name}  様
+    %p 電話番号：       #{@reservation.phone_number}
+    %p メールアドレス： #{@reservation.email}
+    %p ご要望事項：     #{@reservation.request}
+    %br
+    %br
+    %p ご来店を心からお待ちしております。
+    %p ※ご不明な点がございましたら、
+    %p 下記までご連絡くださいますようお願いいたします。
+    %br
+    %hr/
+    %br
+    %p French restaurant Gargotier
+    %p 電話：03-1234-5678
+    %p メールアドレス：△△@△△.co.jp
+    %p 住所：〒111-1111 東京都中野区0-0-0
+    %p 営業時間：11時30分～22時まで
+    %p https://●●●●.co.jp/
+    %br
+    %hr/
+    %br
