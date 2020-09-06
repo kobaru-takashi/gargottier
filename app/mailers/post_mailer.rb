@@ -1,5 +1,5 @@
 class PostMailer < ApplicationMailer
-  default from: 's80.kobaru.takashi@gmail.com'
+  default from: '"French restaurant Gargotier"'
   def published_email(reservation,events)
     @events = events
     @reservation = reservation
