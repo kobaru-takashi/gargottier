@@ -61,4 +61,5 @@ gem 'ancestry'
 gem 'momentjs-rails'
 gem 'fullcalendar-rails'
 gem 'pry-rails'
+gem 'rails-i18n'
 

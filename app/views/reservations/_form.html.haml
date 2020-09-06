@@ -1,6 +1,7 @@
 .main
   .main-block
-    = form_for [@events, @reservation], url: confirm_event_reservations_path(@events.id) do |f|
+    = form_for [@events, @reservation], url: confirm_event_reservations_path(@events.id),local: true, scope: :payment do |f|
+      = render 'layouts/error_messages', model: f.object
       .title French restaurant Gargotier ご予約
       .tag
         .around 入力画面
@@ -28,14 +29,14 @@
               .reservation__date__header__box__left__name ご来店時間
               .reservation__date__header__box__left__required 必須
             .reservation__date__header__box__right
-              = f.select :reservation_time, Reservation.reservation_times.keys, {prompt: "選択してください"}, class: "reservation__date__header__box__right__btn" ,id: "reservation-time"
+              = f.select :reservation_time, Reservation.reservation_times.keys, {prompt: "選択してください"}, class: "reservation__date__header__box__right__btn" ,id: "reservation-time" ,style: "cursor:pointer"
         .reservation__date__header
           .reservation__date__header__box
             .reservation__date__header__box__left
               .reservation__date__header__box__left__name ご来店人数
               .reservation__date__header__box__left__required 必須
             .reservation__date__header__box__right
-              = f.select :number_of_people, Reservation.number_of_people.keys, {prompt: "選択してください"}, class: "reservation__date__header__box__right__btn" ,id: "number-of-people"
+              = f.select :number_of_people, Reservation.number_of_people.keys, {prompt: "選択してください"}, class: "reservation__date__header__box__right__btn" ,id: "number-of-people" ,style: "cursor:pointer"
       
       .reservation-bar
         .reservation-content ご来店者情報
@@ -67,8 +68,8 @@
               .reservation__personal__middle__box__phone__required 必須
             .reservation__personal__middle__box__right
               .phone
-                = f.telephone_field :phone_number, placeholder: "（例） 090-1234-5678", maxlength:14,class: "input" ,id: "phone-btn"
-                .note ※ハイフン(-)を入力してください。
+                = f.telephone_field :phone_number, placeholder: "（例） 09012345678", maxlength:11,class: "input" ,id: "phone-btn"
+                .note ※ハイフン(-)は入力しないで下さい。
                 .note ※お店から連絡が入る場合があります。必ず連絡が取れる番号を入力してください。
 
         .reservation__personal__middle
@@ -95,6 +96,7 @@
         .confirmation-note メールアドレスの入力間違い防止の為、
         .confirmation-note 次の画面でメールアドレス認証を行います。
         .confirmation-btn
-          =f.submit "同意して次に進む",class:"btn", id: "form-btn"
+          =f.submit "同意して次に進む",class:"btn", id: "form-btn" ,style: "cursor:pointer"
  
   = link_to '＜戻る', root_path, class: 'back-btn'
+
