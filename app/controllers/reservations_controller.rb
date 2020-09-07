@@ -1,14 +1,21 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation
+  before_action :set_reservation , only: [:new, :confirm, :back, :create, :complete]
+
+  def index
+    @reservations = Reservation.joins(:event).includes(:event).order("date,reservation_time ASC")
+  end
+  
+  def show
+    @events = Event.find_by(date: params[:date])
+    @events = Event.all
+    @reservation = Reservation.find(params[:id])
+  end
 
   def new
-    @events = Event.find(params[:event_id])
     @reservation = Reservation.new
-    
   end
 
   def confirm
-    @events = Event.find(params[:event_id])
     if request.post?
       @reservation = Reservation.new(reservation_params)
       render :new if @reservation.invalid?
@@ -18,13 +25,11 @@ class ReservationsController < ApplicationController
   end
 
   def back
-    @events = Event.find(params[:event_id])
     @reservation = Reservation.new(reservation_params)
     render :new
   end
 
   def create
-    @events = Event.find(params[:event_id])
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
       PostMailer.published_email(@reservation,@events).deliver

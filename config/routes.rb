@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :events do
-    resources :reservations, only: [:new, :create] do
+    resources :reservations, only: [:new, :create,:index] do
       collection do
         post :new, path: :new, as: :new, action: :back
         post :confirm
@@ -8,6 +8,9 @@ Rails.application.routes.draw do
         get :complete
       end
     end
+  end
+  
+  resources :reservations, only: [:index,:show] do
   end
 
   # get 'events/new'
@@ -17,5 +20,4 @@ Rails.application.routes.draw do
   devise_for :users
   root "homes#index"
   get 'homes/index'
-
 end
