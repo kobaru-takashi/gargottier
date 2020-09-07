@@ -1,0 +1,32 @@
+.reservation-show
+  %p#notice= notice
+
+  %p
+    %b ID:
+    = @reservation.id
+  %p
+    %b 日付:
+    = @reservation.event.date
+  %p
+    %b 時間:
+    = @reservation.reservation_time
+  %p
+    %b 人数:
+    = @reservation.number_of_people
+  %p
+    %b 名前:
+    #{@reservation.family_name}#{@reservation.first_name}
+  %p
+    %b カナ:
+    #{@reservation.family_name_kana}#{@reservation.first_name_kana}
+  %p
+    %b 電話番号:
+    = @reservation.phone_number
+  %p
+    %b メールアドレス:
+    = @reservation.email
+  %p
+    %b ご要望事項:
+    = @reservation.request
+
+  = link_to '一覧へ戻る', reservations_path,class:'path'

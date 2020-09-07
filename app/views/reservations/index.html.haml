@@ -1,0 +1,36 @@
+.reservation-list
+  %h1 
+    ご予約一覧ページ
+    = link_to 'ホーム', root_path
+  %br
+  %table
+    %thead
+      %tr
+        %th ご来店日
+        %th ID
+        %th ご来店時間
+        %th ご来店人数
+        %th 代表者名
+        %th カナ
+        %th 電話番号
+        %th メールアドレス
+        %th ご要望事項
+    %tbody
+      - @reservations.each do |reservation|
+        %tr
+          %td= reservation.event.date
+          %td= reservation.id
+          %td= reservation.reservation_time
+          %td= reservation.number_of_people
+          %td #{reservation.family_name}#{reservation.first_name}
+          %td #{reservation.family_name_kana}#{reservation.first_name_kana}
+          %td= reservation.phone_number
+          %td= reservation.email
+          %td= link_to '詳細', reservation_path(reservation.id)
+  %br
+  %br
+
+
+
+
+

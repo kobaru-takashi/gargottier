@@ -1,0 +1,35 @@
+.reservation-list{
+  h1{
+    padding-left: 90px;
+    font-size: 23px;
+    font-weight: bold;
+  }
+  table{
+    margin: auto;
+    thead{
+      tr{
+        th{
+          padding-right: 30px;
+          font-weight: bold;
+
+        }
+      }
+    }
+    tbody{
+      tr{
+        border: 1px solid  #656565;
+        td{
+          padding-right: 30px;
+          padding-bottom: 3px;
+        }
+      }
+    }
+  }
+}
+.reservation-show{
+  max-width: 1000px;
+  margin: auto;
+  p{
+    padding-bottom: 3px;
+  }
+}
