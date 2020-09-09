@@ -6,28 +6,30 @@
 ・予約機能\
 ・予約したメールアドレスに予約内容確認メールを自動送信\
 ・GoogleMapの表示
-# 
 
 # 本番環境
-#
+・http://localhost:3000/\
+・管理者ログインページ（Basic認証）：http://localhost:3000/\
+・name：Gargotier\
+・password：Gargotier_password
+
 # 制作背景
 ・妻の父は個人経営していフレンチレストランがあります。義父が作る料理はとても美味しいので、色んな方に知って貰いたく今回のホームページ制作至りました。また、予約は全て電話だった為、予約機能を実装する計画を立てました。
-#
-# DEMO
-#
+
 # 工夫したポイント
 ・予約内容を自動送信し、メールで内容確認可能\
 ・固定ヘッダーのボタンによりページ移動操作が容易\
-・GoogleMapを実装した事により場所の把握が容易
-#
+・GoogleMapを実装した事により場所の把握が容易\
+・管理者をログインしている者に定義し、他のユーザーが登録出来ないようにログイン画面にはBasic認証を実装
+
 # 開発環境
 ・Ruby/Ruby on Rails/MySQL/Github/Visual Studio Code/heroku
-#
+
 # 課題や今後実装したい機能
 ・予約内容の検索機能\
 ・予約内容の集計\
 ・残席数の表示
-#
+
 
 # DB設計
 
@@ -59,3 +61,13 @@
 
 ### Association
 - has_many :reservations
+
+
+## Usersテーブル
+|Column|Type|Option|
+|------|----|------|
+|email|string|null: false|
+|string|encrypted_password|null: false|
+
+### Association
+-
