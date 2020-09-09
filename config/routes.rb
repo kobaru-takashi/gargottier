@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   # get 'events/show'
   # get 'events/edit'
   # get 'events/calendar'
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
   root "homes#index"
   get 'homes/index'
 end

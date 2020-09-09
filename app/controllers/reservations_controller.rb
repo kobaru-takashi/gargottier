@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation , only: [:new, :confirm, :back, :create, :complete]
-
+  before_action :move_to_index, except: [:new, :confirm, :back, :create, :complete]
+  
   def index
     @reservations = Reservation.joins(:event).includes(:event).order("date,reservation_time ASC")
   end
@@ -49,5 +50,11 @@ class ReservationsController < ApplicationController
 
   def set_reservation
     @events = Event.find(params[:event_id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end
