@@ -8,8 +8,8 @@
 ・GoogleMapの表示
 
 # 本番環境
-・http://localhost:3000/\
-・管理者ログインページ（Basic認証）：http://localhost:3000/\
+・http://localhost:3000/ \
+・管理者ログインページ（Basic認証）：http://localhost:3000/ \
 ・name：Gargotier\
 ・password：Gargotier_password
 
@@ -67,7 +67,7 @@
 |Column|Type|Option|
 |------|----|------|
 |email|string|null: false|
-|string|encrypted_password|null: false|
+|encrypted_password|string|null: false|
 
 ### Association
 -
