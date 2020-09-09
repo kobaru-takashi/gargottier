@@ -128,11 +128,19 @@
             .dinner-btn 
 
   #Reservation
-  .link
-    = link_to 'スケジュール登録', new_event_path, class: 'new-event-btn'
-  .link
-    = link_to 'ご予約一覧ページ', reservations_path, class: 'new-event-btn'
+  .admin
+    - if user_signed_in?
+      .link
+        = link_to 'スケジュール登録', new_event_path, class: 'new-event-btn'
+      .link
+        = link_to 'ご予約一覧ページ', reservations_path, class: 'new-event-btn'
+      .link
+        = link_to "ログアウト", destroy_user_session_path, method: :delete
+    - else
   #calendar
+
+
+
 
   #Access
   .map-title OUR LOCATION

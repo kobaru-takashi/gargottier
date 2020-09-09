@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event
+  before_action :move_to_index, except: [:index]
 
   def index
     @events = Event.all.order(date: "ASC")
@@ -59,5 +60,11 @@ class EventsController < ApplicationController
    
   def event_params
     params.require(:event).permit(:title, :body, :date)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 end
