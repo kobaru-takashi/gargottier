@@ -84,6 +84,10 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.9.0)
     erubis (2.7.0)
     ffi (1.13.1)
@@ -93,6 +97,7 @@ GEM
       jquery-rails (>= 4.0.5, < 5.0.0)
       jquery-ui-rails (>= 5.0.2)
       momentjs-rails (>= 2.9.0)
+    geocoder (1.6.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     haml (5.1.2)
@@ -264,8 +269,10 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise
+  dotenv-rails
   font-awesome-sass
   fullcalendar-rails
+  geocoder
   haml-rails (>= 1.0, <= 2.0.1)
   jbuilder (~> 2.7)
   jquery-rails
