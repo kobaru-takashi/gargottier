@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: gargottier_production
   username: gargottier
   password: <%= ENV['GARGOTTIER_DATABASE_PASSWORD'] %>
