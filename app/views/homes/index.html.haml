@@ -146,7 +146,9 @@
   .map-title OUR LOCATION
   .map-google
     #map
-  %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyAzMeEZcT8d3Nyz3GIG41YOtkGeHZpaKQs&callback=initMap"}
+
+
+  %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API_KEY']}&callback=initMap"}
   :javascript
     let map
     let geocoder
