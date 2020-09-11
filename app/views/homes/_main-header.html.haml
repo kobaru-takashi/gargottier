@@ -10,8 +10,6 @@
     %a.menuber__home{:href => "#Reservation"} Reservation
     %a.menuber__home{:href => "#Access"} Access
 
-
-  -# %script{:src => "http://code.jquery.com/jquery-3.1.0.min.js", :type => "text/javascript"}
   :javascript
     $(function(){
       $('a[href^="#"]').click(function() {
@@ -25,8 +23,6 @@
       });
     });
 
-
-        
   .Contents
     .Contents__message
     = link_to image_tag("/assets/icon_instagram", width: '40', alt: "サンプル画像", class: "icon"), "https://www.instagram.com/"

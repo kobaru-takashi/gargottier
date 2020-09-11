@@ -144,17 +144,17 @@
     function initMap(){
       geocoder = new google.maps.Geocoder()
       map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 35.706638, lng:139.671185},
+        center: {lat:35.6590866, lng:139.6990532},
         zoom: 15,
       });
       var marker = new google.maps.Marker({
-        position: {lat: 35.706638, lng:139.671185},
+        position: {lat:35.6590866, lng:139.6990532},
         map: map,
       });
       var infowindow = new google.maps.InfoWindow({
-        position: {lat: 35.708150, lng:139.671185},
+        position: {lat:35.6606000, lng:139.6990532},
         map: map,
-        content: "東京都中野区中野1-00-00"
+        content: "東京都渋谷区道玄坂2-00-00"
       });
       google.maps.event.addListener(infowindow, "closeclick", function() {
         google.maps.event.addListenerOnce(marker, "click", function(event) {
@@ -168,14 +168,14 @@
       .first-name French restaurant
       .family-name Gargotier
     .address
-      .address__header 1-00-00, Nakano, NakanoKu, Tokyo, Japan
-      .address__footer 東京都中野区中野1-00-00
+      .address__header 2-00-00, Dougenzaka, Subuyaku, Tokyo, Japan
+      .address__footer 東京都渋谷区道玄坂2-00-00
     .number TEL.03-0000-0000
     .access
-      .access__header JR 中央線 ・ 総武線 ／ 東京メトロ 東西線
-      .access__footer「中野駅」 北口出口より徒歩8分。
-      .access__header-english JR Chuo Line . Seibu Line / Tokyo metro Touzai Line
-      .access__footer-english Nakano station , EXIT North 8min walk
+      .access__header JR 山手線 ／ 東京メトロ 半蔵門線 
+      .access__footer「渋谷駅」 ハチ公口より徒歩5分。
+      .access__header-english JR Yamanote Line / Tokyo metro Hanzomon Line
+      .access__footer-english Shibuya station , EXIT Hatikou 5min walk
     .remark
       .remark__header ※駐車スペースはありません。お近くのパーキングサービスをご利用ください。
       .remark__footer ATTENTION:NO PARKING SORRY

@@ -98,5 +98,8 @@
         .confirmation-btn
           =f.submit "同意して次に進む",class:"btn", id: "form-btn" ,style: "cursor:pointer"
  
-  = link_to '＜戻る', root_path, class: 'back-btn'
+      = link_to '＜戻る', root_path, class: 'back-btn'
+
+  .footer
+  = render "reservations-footer"
 
