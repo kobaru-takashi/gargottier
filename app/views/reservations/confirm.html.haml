@@ -1,3 +1,6 @@
+.header
+  = render "reservations-header"
+  
 .main-new
   .main-block
     .title French restaurant Gargotier ご予約
@@ -102,3 +105,6 @@
       = f.hidden_field :request
       = f.hidden_field :event_id
       = f.submit '入力画面へ戻る',class:"back",style: "cursor:pointer"
+
+.footer
+  = render "reservations-footer"
