@@ -6,11 +6,13 @@
   .swiper-container
     .swiper-wrapper
       .swiper-slide 
-        = image_tag("/assets/2.jpg",alt: "app-store", class: "icon")
+        = image_tag("/assets/01.jpg",alt: "app-store", class: "icon")
       .swiper-slide 
-        = image_tag("/assets/3.jpg",alt: "app-store", class: "icon")
+        = image_tag("/assets/02.jpg",alt: "app-store", class: "icon")
       .swiper-slide 
-        = image_tag("/assets/1.jpg",alt: "app-store", class: "icon")
+        = image_tag("/assets/04.jpg",alt: "app-store", class: "icon")
+      .swiper-slide 
+        = image_tag("/assets/05.jpg",alt: "app-store", class: "icon")
     .swiper-pagination
     .swiper-scrollbar
 
@@ -34,27 +36,18 @@
       },
     });
 
-
-  
   .messages
     .coment 
       .coment-top What's' New
       .coment-under 新着情報
     .message
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-      %div 2002年5月9日  本日の営業は午後14時からになります。
-
+      %div 2020年09月01日   本日の営業は11時半からになります
+      %div 2020年08月01日   テイクアウトはじめました
+      %div 2020年06月01日   新型コロナウイルス感染拡大防止への取り組み
+      %div 2020年05月27日   営業再開のお知らせ（5月29日(金)より）
+      %div 2020年04月16日   緊急事態宣言に伴い休業のお知らせ
+      %div 2020年02月06日   2月7日～14日限定のバレンタイン企画
+      %div 2019年12月15日   年末年始の営業時間のご案内
 
   #Menu
   .menu
@@ -139,15 +132,11 @@
     - else
   #calendar
 
-
-
-
   #Access
   .map-title OUR LOCATION
   .map-google
     #map
-
-  %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_MAP_API_KEY']}&callback=initMap"}
+  %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.credentials.gmap[:GOOGLE_MAP_API_KEY]}&callback=initMap"}
   :javascript
     let map
     let geocoder
@@ -190,8 +179,6 @@
     .remark
       .remark__header ※駐車スペースはありません。お近くのパーキングサービスをご利用ください。
       .remark__footer ATTENTION:NO PARKING SORRY
-
-
 
   .footer
     = render "main-footer"
