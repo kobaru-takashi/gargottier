@@ -7,9 +7,18 @@ class ReservationsController < ApplicationController
   end
   
   def show
+    @reservation = Reservation.find(params[:id])
     @events = Event.find_by(date: params[:date])
     @events = Event.all
+  end
+
+  def destroy
     @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    respond_to do |format|
+      format.html { redirect_to reservations_url, notice: 'Reservation was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
 
   def new
