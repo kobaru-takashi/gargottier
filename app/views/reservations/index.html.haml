@@ -26,7 +26,9 @@
           %td #{reservation.family_name_kana}#{reservation.first_name_kana}
           %td= reservation.phone_number
           %td= reservation.email
-          %td= link_to '詳細', reservation_path(reservation.id)
+          %td= link_to '詳細', reservation
+          %td= link_to '削除', reservation_path(reservation.id), method: :delete, data: { confirm: 'Are you sure?' }
+
   %br
   %br
 

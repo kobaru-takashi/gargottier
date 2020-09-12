@@ -15,9 +15,9 @@
         %tr
           %td= event.title
           %td= event.date
-          %td= link_to 'Show', event
-          %td= link_to 'Edit', edit_event_path(event) 
-          %td= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= link_to '詳細', event
+          %td= link_to '編集', edit_event_path(event) 
+          %td= link_to '削除', event, method: :delete, data: { confirm: 'Are you sure?' }
 
   %br
   = link_to '新規登録', new_event_path

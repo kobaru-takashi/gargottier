@@ -10,9 +10,8 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :reservations, only: [:index,:show] do
+  resources :reservations, only: [:index,:show,:destroy] do
   end
-
   # get 'events/new'
   # get 'events/show'
   # get 'events/edit'
