@@ -1,5 +1,6 @@
 # README
 # Gargotier
+![image](https://user-images.githubusercontent.com/67890575/92997571-3e9e3a80-f54f-11ea-9c05-878b6687ffa3.png)
 
 # 概要
 ・フレンチレストランのホーページ\
@@ -8,13 +9,13 @@
 ・GoogleMapの表示
 
 # 本番環境
-・http://localhost:3000/ \
-・管理者ログインページ（Basic認証）：http://localhost:3000/ \
-・name：Gargotier\
-・password：Gargotier_password
+・https://gargotier.herokuapp.com/ （Basic認証）name = Gargotier / password = Gargotier_password_0990\
+・https://gargotier.herokuapp.com/users/sign_in/ 管理者ログインページ（Basic認証） name = Admin / password = Admin_password_0880 \
+・管理者テストアカウント：test@gmail.com / test1234
+
 
 # 制作背景
-・妻の父は個人経営していフレンチレストランがあります。義父が作る料理はとても美味しいので、色んな方に知って貰いたく今回のホームページ制作至りました。また、予約は全て電話だった為、予約機能を実装する計画を立てました。
+・妻の父はフレンチレストランを個人経営しています。ホームページが存在しないため、顧客は地域のかたや知り合いが多く、さまざまな人にお店を知って欲しいという思いからホームページを作成しました。また、電話のみで予約を承っていたため、予約機能を実装する計画を立てました。
 
 # 工夫したポイント
 ・予約内容を自動送信し、メールで内容確認可能\
