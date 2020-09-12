@@ -14,7 +14,6 @@ $(function () {
           $(document).on('turbolinks:before-cache', clearCalendar);
           $('#calendar').fullCalendar({
               events: '/events.json',
-
               titleFormat: 'YYYY年 M月',
               //曜日を日本語表示
               dayNamesShort: ['日', '月', '火', '水', '木', '金', '土'],
