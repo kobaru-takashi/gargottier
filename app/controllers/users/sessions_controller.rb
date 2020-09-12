@@ -5,7 +5,7 @@ class Users::SessionsController < Devise::SessionsController
 
   def basic_authentication
     authenticate_or_request_with_http_basic do |name, password|
-      name == "Admin" && password == "Admin_password_0880"
+      name == Rails.application.credentials.basic_auth[:name] && password == Rails.application.credentials.basic_auth[:pass]
     end
   end
 end
