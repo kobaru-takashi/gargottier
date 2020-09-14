@@ -64,6 +64,7 @@ gem 'pry-rails'
 gem 'rails-i18n'
 gem 'dotenv-rails'
 gem 'geocoder'
+gem "actionview", ">= 6.0.3.3"
 group :production do
   gem 'pg'
 end
