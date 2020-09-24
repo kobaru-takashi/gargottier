@@ -10,7 +10,8 @@
 
 # 本番環境
 ・https://gargotier.herokuapp.com/ \
-・https://gargotier.herokuapp.com/users/sign_in/ 管理者ログインページ（Basic認証） name = Admin / password = Admin_password_0880 \
+・https://gargotier.herokuapp.com/users/sign_in/ \
+・管理者ログインページ（Basic認証） name = Admin / password = Admin_password_0880 \
 ・管理者テストアカウント：test@gmail.com / test1234
 
 
