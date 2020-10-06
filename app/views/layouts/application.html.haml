@@ -11,3 +11,20 @@
     = javascript_include_tag 'application'
   %body{"data-turbolinks" => "false"}
     = yield
+    %noscript
+  :css
+    .block-frame{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }
+    .cal{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }
+    .map-google{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }

@@ -63,6 +63,10 @@
       border-width: 3px;
       padding: 5px;
       border: 2px solid rgb(165,131,0);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(40px);
+      transition: all 1s;
       .block-frame-inner{
         position: relative;
         border: 1px solid rgb(165,131,0);
@@ -139,37 +143,53 @@
       }
     }
   }
+  .block-frame.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
 
   .link{
     max-width: 1000px;
     margin: auto;
     padding-top: 30px;
   }
-
-  #calendar{
-    padding-top: 50px;
-    width: 1000px;
-    margin: auto;
-    .fc-time{
-      display : none;
-    }
-    .fc-content{
-      text-align: center;
-    }
-    .fc-title{
-      font-size: 50px;
-    }
-    tr:first-child > td > .fc-day-grid-event {
-      height: 60px;
-      width: 70px;
+  .cal{
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(40px);
+    transition: all 1s;
+    #calendar{
+      padding-top: 50px;
+      width: 1000px;
       margin: auto;
-      border-radius: 10px;
-    } 
-    .fc-center {
-      font-size: 36px;
-      padding-left: 120px;
+      .fc-time{
+        display : none;
+      }
+      .fc-content{
+        text-align: center;
+      }
+      .fc-title{
+        font-size: 50px;
+      }
+      tr:first-child > td > .fc-day-grid-event {
+        height: 60px;
+        width: 70px;
+        margin: auto;
+        border-radius: 10px;
+      } 
+      .fc-center {
+        font-size: 36px;
+        padding-left: 120px;
+      }
+    }
   }
+  .cal.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
   }
+
   td.fc-sat {
     background-color: #eaf4ff;
   }
@@ -229,6 +249,10 @@
   .map-google{
     display: flex;
     justify-content: center;
+    opacity: 0; 
+    visibility: hidden;
+    transform: translateY(40px);
+    transition: all 1s;
     #map {
       width: 1000px;
       height: 500px;
@@ -236,5 +260,10 @@
     div{
       font-Weight: bold;
     }
+  }
+  .map-google.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
   }
 }
