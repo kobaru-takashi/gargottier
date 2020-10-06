@@ -155,10 +155,7 @@
     padding-top: 30px;
   }
   .cal{
-    opacity: 0; 
-    visibility: hidden;
-    transform: translateY(40px);
-    transition: all 1s;
+
     #calendar{
       padding-top: 50px;
       width: 1000px;
@@ -249,10 +246,7 @@
   .map-google{
     display: flex;
     justify-content: center;
-    opacity: 0; 
-    visibility: hidden;
-    transform: translateY(40px);
-    transition: all 1s;
+
     #map {
       width: 1000px;
       height: 500px;
