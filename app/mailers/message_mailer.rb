@@ -1,10 +1,7 @@
 class MessageMailer < ApplicationMailer
-  default to: Rails.application.credentials.gmail[:user_name] # 送信先アドレス
-
+  default from: '"French restaurant Gargotier"'
   def received_email(message)
     @message = message
-    mail(subject: 'webサイトよりメッセージが届きました') do |format|
-      format.text
-    end
+    mail to: Rails.application.credentials.gmail[:user_name]
   end
 end
