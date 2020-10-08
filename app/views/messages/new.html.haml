@@ -1,4 +1,5 @@
-= form_for(@message, url: { action: :confirm }) do |f|
+
+= form_for [@message], url: confirm_messages_path,local: true, scope: :payment do |f|
   %div
     %h2 お問い合わせ
     - if @message.errors.present?

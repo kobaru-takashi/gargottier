@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get 'homes/index'
 
 
-  resources :messages ,only: [:index, :create] do
+  resources :messages ,only: [:new, :create,:index] do
     collection do
       post :new, path: :new, as: :new, action: :back
       post :confirm
