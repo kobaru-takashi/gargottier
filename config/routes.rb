@@ -21,4 +21,16 @@ Rails.application.routes.draw do
   }
   root "homes#index"
   get 'homes/index'
+
+
+  resources :messages ,only: [:index, :create] do
+    collection do
+      post :new, path: :new, as: :new, action: :back
+      post :confirm
+      get :confirm
+      get :complete
+    end
+  end
+
+
 end

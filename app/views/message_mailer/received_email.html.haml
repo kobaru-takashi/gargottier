@@ -1,0 +1,12 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "text/html; charset=UTF-8"}/
+  %body
+    %h2
+      = @message.name
+      様からメッセージが届きました。
+    %hr/
+    %p メールアドレス：     #{@message.email} 
+    %p 内容： #{@message.content} 
