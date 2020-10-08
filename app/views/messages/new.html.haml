@@ -1,0 +1,20 @@
+
+= form_for [@message], url: confirm_messages_path,local: true, scope: :payment do |f|
+  %div
+    %h2 お問い合わせ
+    - if @message.errors.present?
+      %div
+        %strong 入力内容にエラーがあります
+        %ul
+          - @message.errors.each do |attr, error|
+            %li= error
+    %div
+      %strong 名前
+      %p= f.text_field :name, placeholder: '20文字以内'
+    %div
+      %strong メールアドレス
+      %p= f.text_field :email, placeholder: '30文字以内'
+    %div
+      %strong 内容
+      %p= f.text_area :content, placeholder: '200文字以内'
+    = f.submit '確認画面へ'
