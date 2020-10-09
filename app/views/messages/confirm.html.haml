@@ -1,21 +1,31 @@
+.Contact-Us
+  .header
+    = render "reservations/reservations-header"
+  .main
+    = form_for :message, url: messages_path,local: true, scope: :payment do |f|
+      %div
+        %h2 内容確認
+        %div
+          %strong 名前
+          %p
+            = f.hidden_field :name
+            = @message.name
+        %div
+          %strong メールアドレス
+          %p
+            = f.hidden_field :email
+            = @message.email
+        %div
+          %strong 内容
+          %p
+            = f.hidden_field :content
+            = simple_format(@message.content)
+        = f.submit '送信する'
+    = form_for :message, url: new_messages_path do |f|
+      = f.hidden_field :name
+      = f.hidden_field :email
+      = f.hidden_field :content
+      = f.submit '入力画面へ戻る',class:"back",style: "cursor:pointer"
 
-= form_for :message, url: messages_path,local: true, scope: :payment do |f|
-  %div
-    %h2 内容確認
-    %div
-      %strong 名前
-      %p
-        = f.hidden_field :name
-        = @message.name
-    %div
-      %strong メールアドレス
-      %p
-        = f.hidden_field :email
-        = @message.email
-    %div
-      %strong 内容
-      %p
-        = f.hidden_field :content
-        = simple_format(@message.content)
-    = f.submit '送信する'
-    = f.submit '戻る', name: 'back'
+  .footer
+    = render "reservations/reservations-footer"

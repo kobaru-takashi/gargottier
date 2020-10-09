@@ -6,36 +6,28 @@ class MessagesController < ApplicationController
   def confirm
     if request.post?
       @message = Message.new(message_params)
-      render :index if @message.invalid?
+      render :new if @message.invalid?
     else
-      redirect_to message_path
+      redirect_to new_messages_path
     end
-
-    # @message = Message.new(message_params)
-    # if @message.valid?
-    #   render :action => 'confirm'
-    # else
-    #   render :action => 'index'
-    # end
   end
+
+  def back
+    @message = Message.new(message_params)
+    render :new
+  end
+
   def create
     @message = Message.new(message_params)
     if @message.save
       MessageMailer.received_email(@message).deliver
       redirect_to complete_messages_path
     else
-      render :index
+      render :new
     end
   end
 
   def complete
-    # @message = Message.new(message_params)
-    # if params[:back]
-    #   render :action => 'index'
-    # else
-    #   MessageMailer.received_email(@message).deliver
-    #   render :action => 'complete'
-    # end
   end
 
   private
