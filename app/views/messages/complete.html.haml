@@ -1,11 +1,15 @@
 .Contact-Us
   .header
     = render "reservations/reservations-header"
-  .main
-    %h2 メッセージ送信完了
-    %p メッセージをいただきありがとうございました。
+  .complete
+    .block
+      .title お問い合わせ
+    .bar
+      .content メッセージ送信完了
+    %p お問い合わせ頂きありがとうございました。
+    %p 内容を確認次第、ご連絡差し上げます。
     =link_to root_path, class:"link" do
-      ホーム画面に戻る
+      トップページへ戻る
 
   .footer
     = render "reservations/reservations-footer"

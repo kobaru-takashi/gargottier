@@ -74,3 +74,13 @@
 
 ### Association
 -
+
+## Messagesテーブル
+|Column|Type|Option|
+|------|----|------|
+|name|string|null: false|
+|email|string|null: false|
+|content|text|null: false|
+
+### Association
+-

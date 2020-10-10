@@ -8,7 +8,7 @@
   }
   .main{
     flex: 1;
-    max-width: 1000px;
+    width: 1000px;
     margin: auto;
     padding: 0 40px;
     border: 1px solid  #E4E4E4;
@@ -22,7 +22,7 @@
       }
     }
     .form-name{
-      margin-top: 30px;
+      margin-top: 15px;
       border: 1px solid #E4E4E4;
       display: flex;
       .name{
@@ -93,7 +93,19 @@
       padding: 15px 90px;
       display: flex;
       margin: auto;
-      margin-top: 30px;
+      margin-top: 15px;
+    }
+    .back{
+      display: flex;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px 50px;
+      background-color: #F0F0E8;
+      font-weight: bold;
+      font-size: 17px;
+      border-radius: 3px;
+      border-style: solid; border-color: #F0F0E8;
     }
   }
 }

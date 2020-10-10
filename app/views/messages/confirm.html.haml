@@ -1,26 +1,26 @@
 .Contact-Us
   .header
     = render "reservations/reservations-header"
-  .main
+  .confirm
     = form_for :message, url: messages_path,local: true, scope: :payment do |f|
-      %div
-        %h2 内容確認
-        %div
-          %strong 名前
-          %p
-            = f.hidden_field :name
-            = @message.name
-        %div
-          %strong メールアドレス
-          %p
-            = f.hidden_field :email
-            = @message.email
-        %div
-          %strong 内容
-          %p
-            = f.hidden_field :content
-            = simple_format(@message.content)
-        = f.submit '送信する'
+      .block
+        .title お問い合わせ
+      .form-name
+        .name 名前
+        = f.hidden_field :name,class:'name'
+        .right
+          = @message.name
+      .form-email
+        .email メールアドレス
+        = f.hidden_field :email
+        .right
+          = @message.email
+      .form-content
+        .content 内容
+        = f.hidden_field :content
+        .right
+          = @message.content
+      = f.submit '送信する',class:'btn',style: "cursor:pointer"
     = form_for :message, url: new_messages_path do |f|
       = f.hidden_field :name
       = f.hidden_field :email

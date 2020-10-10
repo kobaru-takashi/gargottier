@@ -7,14 +7,14 @@
         .title お問い合わせ
       .form-name
         .name 名前
-        = f.text_field :name, placeholder: '20文字以内',class:'name-form'
+        = f.text_field :name, placeholder: '（例）山田太郎',class:'name-form',id: "name"
       .form-email
         .email メールアドレス
-        = f.text_field :email, placeholder: '30文字以内',class:'email-form'
+        = f.text_field :email, placeholder: '（例） gargotier@gmail.com',class:'email-form',id: "email"
       .form-content
         .content 内容
-        = f.text_area :content, placeholder: '200文字以内', maxlength:200,class:'content-form'
-      = f.submit '確認画面へ',class:'btn'
+        = f.text_area :content, placeholder: '200文字以内', maxlength:200,class:'content-form',id: "content"
+      = f.submit '確認画面へ',class:'btn',id: "form-btn" ,style: "cursor:pointer"
  
   .footer
     = render "reservations/reservations-footer"
