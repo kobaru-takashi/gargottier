@@ -12,10 +12,7 @@ Rails.application.routes.draw do
   
   resources :reservations, only: [:index,:show,:destroy] do
   end
-  # get 'events/new'
-  # get 'events/show'
-  # get 'events/edit'
-  # get 'events/calendar'
+
   devise_for :users, controllers: {
     sessions: 'users/sessions'
   }

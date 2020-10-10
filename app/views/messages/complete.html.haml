@@ -1,4 +1,16 @@
-%div
-  %h2 メッセージ送信完了
-  %p
-    メッセージをいただきありがとうございました。
+.Contact-Us
+  .header
+    = render "reservations/reservations-header"
+    
+  .complete
+    .block
+      .title お問い合わせ
+    .bar
+      .content メッセージ送信完了
+    %p お問い合わせ頂きありがとうございました。
+    %p 内容を確認次第、ご連絡差し上げます。
+    =link_to root_path, class:"link" do
+      トップページへ戻る
+
+  .footer
+    = render "reservations/reservations-footer"
