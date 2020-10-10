@@ -1,6 +1,7 @@
 .Contact-Us
   .header
     = render "reservations/reservations-header"
+    
   .confirm
     = form_for :message, url: messages_path,local: true, scope: :payment do |f|
       .block
