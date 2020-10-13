@@ -2,8 +2,8 @@ FactoryBot.define do
 
   factory :message do
 
-    name              {Faker::JapaneseMedia::OnePiece.character}
-    email             {Faker::Internet.email}
+    name              {Faker::Name.last_name}
+    email             {Faker::Internet.free_email}
     content           {Faker::Lorem.characters(number: 200)}
 
   end
