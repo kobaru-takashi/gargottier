@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: gargottier_production
-  username: gargottier
+  username: root
   password: <%= ENV['GARGOTTIER_DATABASE_PASSWORD'] %>
