@@ -51,4 +51,5 @@ production:
   <<: *default
   database: gargottier_production
   username: root
-  password: <%= ENV['GARGOTTIER_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
